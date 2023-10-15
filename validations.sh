@@ -9,7 +9,7 @@ echo "Checking the validations"
 # $? == 1 --> Gives failure status
 
 
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then
     echo "The validations are sucees"
 else 
