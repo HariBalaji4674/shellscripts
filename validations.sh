@@ -18,11 +18,11 @@ validation() {
     fi
 }
 
-sudo yum install postfix -y 
+yum install postfix -y 
 
 validation $? " Postfix Installation "
 
-sudo yum install mysql -y 
+yum install mysql -y 
 
 validation $? " Mysql Installation "
 
