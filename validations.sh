@@ -11,7 +11,8 @@ echo "Checking the validations"
 validation() { 
     if [ $1 -ne 0 ]
     then
-        echo "$2 are sucees"
+        echo "$2 are success"
+        exit 1
     else 
         echo "$2 are failure"
     fi
