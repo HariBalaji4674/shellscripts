@@ -8,10 +8,20 @@ echo "Checking the validations"
 # $? == 0 --> gives succes status
 # $? == 1 --> Gives failure status
 
+validation() { 
+    if [ $1 -ne 0 ]
+    then
+        echo "$2 are sucees"
+    else 
+        echo "$2 are failure"
+    fi
+}
 
-if [ $? -ne 0 ]
-then
-    echo "The validations are sucees"
-else 
-    echo "The Validations are failure"
-fi 
+sudo yum install postfix -y 
+
+validation $? " Postfix Installation "
+
+yum install mysql -y 
+
+validation $? " Mysql Installation "
+
