@@ -9,7 +9,7 @@ echo "Checking the validations"
 # $? == 1 --> Gives failure status
 
 validation() { 
-    if [ $1 -ne 0 ]
+    if [ $1 -eq 0 ]
     then
         echo "$2 are success"
     else 
@@ -17,11 +17,11 @@ validation() {
     fi
 }
 
-yum install postfix -y 
+sudo yum install postfix -y 
 
 validation $? " Postfix Installation "
 
-yum install mysql -y 
+sudo yum install mysql -y 
 
 validation $? " Mysql Installation "
 
